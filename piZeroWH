@@ -1,3 +1,19 @@
 //pi Zero WH
 //python
 
+number = "number recognized by the Kine"
+div = number
+
+if number >= 2**8:
+  print "Invalid Input"
+  
+  
+n = 8
+while n > 0:
+  if div > (2**(n-1)):
+  #light up Pin n
+  print "1"
+  div = div % (2**(n-1))
+  n = n - 1
+else:
+  print "0"
