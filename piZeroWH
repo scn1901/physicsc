@@ -28,8 +28,12 @@ while n > 0:
     print "0"
     n = n - 1
     i++
-  elseif command = "off":
+  elseif: command = "off":
     GPIO.output(pin[i], GPIO.LOW)
     n = n - 1
     i++
-    
+while light[i] = 1:
+  GPIO.output(pin[i], GPIO.HIGH)
+while light[i] = 0:
+  GPIO.output(pin[i], GPIO.LOW)
+  
