@@ -3,17 +3,26 @@
 
 number = "number recognized by the Kine"
 div = number
+light[8]
 
 if number >= 2**8:
   print "Invalid Input"
   
-  
 n = 8
+i = 0
+o = 2
 while n > 0:
   if div > (2**(n-1)):
   #light up Pin n
+  GPIO.output(o, GPIO.HIGH)
+  light[i] = 1
   print "1"
   div = div % (2**(n-1))
   n = n - 1
+  i++
 else:
+  GPIO.output(o, GPIO.LOW)
+  light[i] = 0
   print "0"
+  n = n - 1
+
