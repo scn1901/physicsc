@@ -41,24 +41,31 @@ print (light)
 
 
 
-#the code that isnt working
-x = 7
+# it works now
 
-while x > 0:
-    max = 2 ** x
-    div = 50
-    light = [0,0,0,0,0,0,0,0]
-    if div > max:
-        div = div % max
-        if div % 2 == 0:
-            light[x] = 0
-            print "0"
-            x = x - 1
-            return 1
-    else:
+#pi Zero WH
+#python
+#import math
+
+#if div >= 2**8:
+#    print("Invalid Input")
+
+#potential pins
+#pin = [8, 10, 11, 12, 13, 15, 16, 18]
+
+x = 0 #counting up for array location
+n = 7 #count down for base 2
+div = 95
+light = [0,0,0,0,0,0,0,0] #
+
+while x < 8: #going through binary digits
+    max = 2 ** (n) #binary base-2
+    #print (max)
+    if div >= max: #if divisible
+        div = div % max #then
         light[x] = 1
-        print "1"
-        x = x - 1
-        return 1
-if x == 1:
-    return 0
+    else:
+        light[x] = 0
+    x = x + 1
+    n = n - 1
+print (light)
