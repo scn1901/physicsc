@@ -19,14 +19,14 @@ if div >= 2**8:
 
 x = 0 #counting up for array location
 n = 7 #count down for base 2
-div = 95
+#div = 95    number
 light[8][2] = [0,0,0,0,0,0,0,0], [3, 5, 19, 21, 23, 8, 10, 26]
 
 while x < 8: #going through binary digits
     max = 2 ** (n) #binary base-2
     #print (max)
-    if div >= max: #if divisible
-        div = div % max #then
+    if number >= max: #if divisible
+        number = number % max #then save the remainder
         light[x][1] = 1
         GPIO.output(light[x][2], GPIO.HIGH)
     else:
